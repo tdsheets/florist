@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prettiful Petals</title>
+    <meta name='keywords' content='florist, flowers, arrangements, bouquets, gift baskets, events, sympathy, wedding, birthday'></meta>
+    <link href="https://fonts.googleapis.com/css?family=Alex+Brush" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="ionicons.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="flowers.css" /> 
+</head>
+<body>
+    <header id="header">
+        <a href="index.html" class="logo"><img src="images/prettifulLogopurple.png" alt="Home" /></a>
+        <a href="cart.html" class="viewCart clearfix">Cart</a>
+        <nav class="navigation main">
+            <ul class="nav">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#products">Flowers</a></li>                
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="slides">
+        <h1>Floral arrangements for all your special occasions</h1>
+        <img class="third slide" src="images/flowers/stock/lewisia-mirrored.jpg" />
+        <img class="second slide" src="images/flowers/stock/flowers-728811_1920.jpg" />
+        <img class="starter slide" src="images/flowers/stock/flowers-802998_640.jpg" />
+    </section>
+    
+    <section class="products" id="products">
+        <h2>Flowers</h2>
+        <div class="thumbs">
+            <div class="rose">
+                <!--<img class="rose" src="images/flowers/stock/rose-bouquet.jpg" />-->
+                <!--<img src="images/flowers/stock/rose-bouquet.jpg" />-->
+                <div class="info">
+                    <a href="bouquets/rose.html" class="product-name">Two Dozen Roses</a>
+                    <p>The classic favorite!</p>
+                </div>
+            </div>
+            <div class="purple">
+                <!--<img src="images/flowers/stock/purple-bouquet.jpg" />-->
+                <div class="info">
+                    <a href="bouquets/purple.html" class="product-name">Wrapped Bridal Bouquet</a>
+                    <p>Simple elegance for your big day</p>
+                </div>
+            </div>
+            <div class="pink">
+                <!--<img src="images/flowers/stock/pink-bouquet.jpg" />-->
+                <div class="info">
+                    <a href="bouquets/pink.html" class="product-name">Pretty in Pink</a>
+                    <p>Gorgeous pink flowers in a simple glass vase</p>
+                </div>
+            </div>
+            <div class="daisy">
+                <!--<img src="images/flowers/stock/daisy-bouquet.jpg" />-->
+                <div class="daisy-info info">
+                    <a href="bouquets/daisy.html" class="product-name">Daisy Chain</a>
+                    <p>Daisy, daisy, give me your answer do...</p>
+                </div>
+            </div>
+            <div class="orange">
+                <!--<img src="images/flowers/stock/orange-bouquet.jpg" />-->
+                <div class="info">
+                    <a href="bouquets/orange.html" class="product-name">Orange Julius</a>
+                    <p>Craving some orange in your life? Try this sweet bouquet</p>
+                </div>
+            </div>
+            <div class="white">
+                <!--<img src="images/flowers/stock/white-bouquet.jpg" />-->
+                <div class="info">
+                    <a href="bouquets/white.html" class="product-name">Snow White</a>
+                    <p>Who's the fairest one of all?</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="about" id="about">
+        <h2>About Us</h2>
+        <img src="images/flowers/stock/flowers-260897_1280.jpg" alt="wedding bouquet" />
+        <p>This is an example website created by Tara Sheets for a fictional florist. If you'd like to learn more, check out <a href="http://www.sheetsngeekles.com">SheetsNGeekles.com</a> to see more work or fill out the <a href="#contact">contact form</a> below.</p>
+    </section>
+    
+    <section class="map">
+        <div id="googleMap"></div>
+        <p>Tara Sheets is a web developer who lives and works in the Greater Cincinnati and Dayton area.</p>
+    </section>
+    
+    <section class="contact" id="contact">
+        <h2>Get in Touch</h2>
+        <form action="email.php">
+            <table>
+                <tr>
+                    <td><input type="text" class="name" placeholder="Your Name" /></td>
+                </tr>
+                <tr>
+                    <td><input type="email" class="email" placeholder="Your Email Address" /></td>
+                </tr>
+                <tr>
+                    <td><textarea placeholder="Leave your message here"></textarea></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" class="submit" value="Send Message" /></td>
+                </tr>
+            </table>
+        </form>
+    </section>
+    
+    <footer>
+        <div class="row">
+            <p>
+                <a href="www.sheetsngeekles.com">SheetsNGeekles.com</a>
+            </p>
+            </div>
+            <p>
+                Copyright &copy; 2016 by Tara Sheets. All rights reserved.
+            </p>
+            <div class="row social-links clear-fix">
+                <a href="https://www.linkedin.com/in/tdsheets" target="_blank"><i class="ion-social-linkedin"></i></a>
+            </div>
+    </footer>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/selectivizr/1.0.3b/selectivizr.min.js"></script> 
+    <script src="jquery.waypoints.min.js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+    <script src="script.js"></script>
+    <script>
+        google.maps.event.addDomListener(window, 'load', initialize);
+        
+        function initialize() {
+            var mapProp = {
+                center:new google.maps.LatLng(39.4040, -84.4068),
+                zoom: 9,
+                styles: [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#e9e9e9"},{"lightness":17}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":20}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#ffffff"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":16}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":21}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#dedede"},{"lightness":21}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"lightness":16}]},{"elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#333333"},{"lightness":40}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#f2f2f2"},{"lightness":19}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#fefefe"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#fefefe"},{"lightness":17},{"weight":1.2}]}]
+            };
+            var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+        }
+    
+    
+    </script>
+</body>
+</html>
